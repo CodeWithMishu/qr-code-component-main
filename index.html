@@ -19,13 +19,20 @@
       @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
     </style>
     <style>
+      :root {
+  --main-bg-color:hsl(212, 45%, 89%) ;
+  --card-bg-color:hsl(0, 0%, 100%);
+  --h2-color:hsl(218, 44%, 22%);
+  --p-color:hsl(216, 15%, 48%);
+  --attribution-color:hsl(228, 45%, 44%);
+}
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
       body {
-        background-color: hsl(212, 45%, 89%);
+        background-color: var(--main-bg-color);
         font-family: "Outfit", sans-serif;
       }
 
@@ -35,13 +42,13 @@
         min-height: 98vh;
       }
       .card {
-        background-color: hsl(0, 0%, 100%);
-        width: 320px;
+        background-color: var(--card-bg-color);
+        width: 20rem;
         max-width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        padding: min(50%,10px);
         gap: 10px;
         border-radius: 10px;
         text-align: center;
@@ -53,25 +60,30 @@
 
         h2 {
           font-weight: 700;
-          color: hsl(218, 44%, 22%);
-          padding: 10px;
+          color: var(--h2-color);
+         padding: min(50%,10px);
         }
 
         p {
           font-size: 15px;
           font-weight: 400;
-          color: hsl(216, 15%, 48%);
+          color: var(--p-color);
           padding: 0px 25px 0px 25px;
         }
       }
 
+      footer{
+                text-align: center;
+                word-wrap: normal;
+
+      }
 
       .attribution {
         font-size: 0.6875rem;
         text-align: center;
       }
       .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: var(--attribution-color);
       }
     </style>
   </head>
